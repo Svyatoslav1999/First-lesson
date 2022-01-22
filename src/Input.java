@@ -23,6 +23,7 @@ public class Input {
             case 1: d = a + b;
                 System.out.println("Твой результат" + d);
                 break;
+
             case 2: d = a - b;
                 System.out.println("Твой результат" + d);
                 break;
@@ -32,6 +33,8 @@ public class Input {
             case 4: d = a / b;
                 System.out.println("Твой результат" + d);
                 break;
+            default:
+                System.out.println("Неверно");
         }
 
 
