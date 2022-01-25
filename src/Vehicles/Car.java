@@ -6,6 +6,7 @@ public abstract class Car {
    private boolean engineIsActive;
    private String name;
    private int year;
+   private static String bla = "bla";
    private boolean names;
 
     public Car(boolean engineIsActive, String name, int year) {
@@ -20,6 +21,14 @@ public abstract class Car {
 
     public void setEngineIsActive(boolean engineIsActive) {
         this.engineIsActive = engineIsActive;
+    }
+
+    public String getBla() {
+        return bla;
+    }
+
+    public void setBla(String bla) {
+        Car.bla = bla;
     }
 
     public String getName() {
@@ -58,8 +67,15 @@ public abstract class Car {
     }
     public static String lengthNames(Car car){
         if (car.getName().length() > 3){
-            return "car name length bigger than 3";
+            return car.getName();
         }
-        return "car name length less than 3";
+        return car.getName() + " -> less than 3 symbol";
+    }
+
+    public static String lengthNamesByName(String name){
+        if (name.length() > 3){
+            return name;
+        }
+        return name + " -> less than 3 symbol";
     }
 }
