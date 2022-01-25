@@ -15,17 +15,23 @@ public class Program {
         Car bmw = new Volvo(true, "bmw", 7);
         String s = volvo.lengthNames(volvo);
         Car[] samochody = new Car[5];
+        Car[] oldsamochody = new Car[10];
         samochody[0] = new Volvo(true, "kia", 7);
         samochody[1] = new Volvo(true, "volvo", 7);
         samochody[2] = new Volvo(true, "mazda", 7);
         samochody[3] = new Volvo(true, "mercedes", 7);
         samochody[4] = new Volvo(true, "bmw", 7);
-        for (int i = 0;i< samochody.length ;i++){
-            String x = Car.lengthNames(samochody[i]);
+        for (int i = 0;i < samochody.length; i++) {
+
+            if (true){
+                oldsamochody[oldsamochody.length] = samochody[i];
+            }
+            Car value = samochody[i];
+            String x = Car.lengthNames(value);
             System.out.println(x);
         }
-        for (int i = 0;i< samochody.length ;i++){
-            String x = Car.lengthNamesByName(samochody[i].getName());
+        for (Car car : samochody) {
+            String x = Car.lengthNamesByName(car.getName());
             System.out.println(x);
         }
     }
